@@ -40,7 +40,7 @@ As music lovers, we cannot live without good and fresh music. One of the main mo
 2. Worked on the multi-line chart and the word cloud.
 3. Assembled all pieces of code together and mainly worked on the project application.
 4. Collaborated on the final project presentation video.
-- Anothy:
+- Anthony:
 1. Collaborated on the initial project proposal design video.
 2. Worked on the horizontal bar chart.
 3. Assisted the write up and proofread the readme file.
