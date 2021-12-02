@@ -1,0 +1,21 @@
+{
+  "name": "d3-crashcourse",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^2.5.2"
+  },
+  "dependencies": {
+    "d3": "^7.0.1",
+    "vega": "^5.21.0",
+    "vega-embed": "^6.19.1",
+    "vega-lite": "^5.1.1",
+    "d3-v3": "npm:d3@^3.5.17",
+    "d3-v4": "npm:d3@^4.13.0",
+    "d3-v6": "npm:d3@^6.7.0"
+  }
+}

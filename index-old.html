@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Load d3.js -->
+        <!-- for emily -->
+        <!-- <script src="https://d3js.org/d3.v4.js"></script> -->
+        <!-- for fernie -->
+        <!-- <script src="https://d3js.org/d3.v3.min.js"></script> -->
+        <!-- for yu jan -->
+        <!-- <script src="https://d3js.org/d3.v6.js"></script> 
+        <script src="https://d3js.org/d3-array.v2.min.js"></script> -->
+        <title>DV Final Project</title>
+        <!-- <link rel="stylesheet" href="./style.css" /> -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <style type="text/css">
+          svg {
+            font: 10px sans-serif;
+            shape-rendering: crispEdges;
+          }
+        
+          .axis path,
+          .axis line {
+            fill: none;
+            stroke: #000;
+          }
+         
+          path.domain {
+            stroke: none;
+          }
+         
+          .y .tick line {
+            stroke: #ddd;
+          }
+          </style>
+      </head> 
+      <body>
+        <div class="header">
+            <br>
+            <h2>Data Visualization Final Project</h2>
+            <br>
+            <p><i>Yu-Jan Chang, Yiluo Qin, Anthony Wu, Emily Zhang</i></p>
+        </div>
+
+        <div id="my_dataviz2"></div>
+        <script src="anthony.js" type="module"></script>
+
+        <!-- Emily's -->
+        <div id="multiline_chart"><h3 id="graph_title">Multiline Chart</h3><br></div>
+        <script src="emily_chart.js" type="module"></script>
+
+        <!-- Fernie's -->
+        <h1>Male and Female Artisits Distribution</h1>
+        <!-- A local external javascript file-->
+        <!-- <script src="fernie_chart.js" type="module"></script> -->
+
+        <!-- Yu-Jan's -->
+        <h2 style="color:#404040; font-family: Arial, Helvetica, sans-serif;">How do your tastes line up?</h2>
+        <div id="test" style="width:100%; height:100%;"></div>
+        <!-- Initialize a select button -->
+        <select id="selectButton"></select>
+        <!-- Create a div where the graph will take place -->
+        <div id="my_dataviz"></div>
+    
+        <script src="./main.js" type="module"></script>
+
+        <footer>
+          <br>
+          <p>Source: <a href="https://www.kaggle.com/delaneyisabella/spotify-top-100-tracks-20012019?select=Top2019.csv ">Spotify Top 100 Tracks (2001-2019) - Isabella Delaney</a></p>
+        </footer>
+
+        
+      </body>
+</html>

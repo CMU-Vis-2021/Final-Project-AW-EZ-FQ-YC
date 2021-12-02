@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <!-- NEW -->
+        <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>DV Final Project</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <style type="text/css">
+          svg {
+            font: 10px sans-serif;
+            shape-rendering: crispEdges;
+          }
+        
+          .axis path,
+          .axis line {
+            fill: none;
+            stroke: #000;
+          }
+         
+          path.domain {
+            stroke: none;
+          }
+         
+          .y .tick line {
+            stroke: #ddd;
+          }
+        </style>
+    </head>
+    <body id="page-top">
+        
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+                <div class="d-flex justify-content-center">
+                    <div class="text-center">
+                        
+                        <h1 class="mx-auto my-0 text-uppercase">What makes a song hit the charts?</h1><br><br><br>
+                        <h2 class="text-white mx-auto mt-2 mb-5">A narrative through data visualizations</h2>
+                        <a class="btn btn-primary" href="#dv0-intro">Let's Go!</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- DV0: Most successful songs - Bar Chart (Anthony + Yu-Jan)-->
+        <section class="about-section text-center" id="dv0-intro">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-10">
+                        <div>
+                            <br><br><br>
+                            <h2 class="text-white mb-8">How do we define success in a top song?</h2>
+                            <br><br>
+                            <p class="text-white">Number of streams? <br> Profit generated? <br> What about time on the charts?</p>
+                            <br><br><br><br><br><br><br><br>
+                        </div>
+                        <a class="btn btn-primary" href="#dv0-viz">Which songs reigned in the Top 100 the longest?</a>
+                        <br><br><br>
+                    </div>
+                </div> 
+            </div>
+        </section>
+
+        <section class="projects-section bg-light text-center" id="dv0-viz">
+            <!-- Anthony's -->
+            <div id="my_dataviz2"><h2 id="graph_title0">Consecutive Years of Songs in the Top 100 (2001-2019)</h2></div>
+            <script src="anthony.js" type="module"></script>
+
+            <br><br><br>
+            <div class="container px-4 px-lg-5">
+                <p>As for our first visualization, we are showing the frequency in which a particular song has ranked in the top 100 Billboard. Within the chart, we notice that songs don’t maintain popularity for too long, with Home, the longest reinging song, being ranked in the top 100 only four times. </p>
+            </div>
+            <br><br><br>
+        </section>
+
+        <!-- DV1: Quantitative Song Attributes - Multiline Chart (Emily)-->
+        <section class="about-section text-center" id="dv1-intro">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-10">
+                        <div>
+                            <br><br><br>
+                            <h2 class="text-white mb-8">Think about songs you've heard on the radio lately.</h2>
+                            <br><br>
+                            <p class="text-white">What kind of similarities have you noticed? <br> Do they make you want to dance? <br> How energetic is the beat? <br> Does the instrumental background tend to be acoustic or electronic?</p>
+                            <br><br><br><br><br><br><br><br>
+                        </div>
+                        <a class="btn btn-primary" href="#dv1-viz">Are there certain attributes that can be measured?</a>
+                        <br><br><br>
+                    </div>
+                </div> 
+            </div>
+        </section>
+
+        <section class="projects-section bg-light text-center" id="dv1-viz">
+            <!-- Emily's -->
+            <div id="multiline_chart"><h2 id="graph_title1">Quantitative Song Attributes (2001-2019)</h2><br></div>
+            <script src="emily_chart.js" type="module"></script>
+            <br><br><br>
+            <div class="container px-4 px-lg-5">
+                <p>It seems the formula for a hit pop song has stayed pretty much the same over the years. Songs that are high energy and danceable seem to have the best chance of hitting the charts—would you agree? </p>
+            </div>
+            <br><br><br>
+        </section>
+
+        <!-- DV2: Common Topics - Wordcloud (Emily)-->
+        <section class="about-section text-center" id="dv2-intro">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-10">
+                        <div>
+                            <br><br><br>
+                            <h2 class="text-white mb-8">What about the subject of these songs?</h2>
+                            <br><br>
+                            <p class="text-white">Are there any key terms that keep popping up in these song titles? <br> How has this changed over the years? <br> Can you think of any trends in your own listening habits? </p>
+                            <br><br><br><br><br><br><br><br>
+                        </div>
+                        <a class="btn btn-primary" href="#dv2-viz">Is there a common theme amongst popular songs?</a>
+                        <br><br><br>
+                    </div>
+                </div> 
+            </div>
+        </section>
+
+        <section class="projects-section bg-light text-center" id="dv2-viz">
+
+            <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                  <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                  <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                  <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                  <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                  <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="8" aria-label="Slide 9"></button>
+                  <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="9" aria-label="Slide 10"></button>
+                  <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="10" aria-label="Slide 11"></button>
+                  <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="11" aria-label="Slide 12"></button>
+                  <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="12" aria-label="Slide 13"></button>
+                  <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="13" aria-label="Slide 14"></button>
+                  <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="14" aria-label="Slide 15"></button>
+                  <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="15" aria-label="Slide 16"></button>
+                  <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="16" aria-label="Slide 17"></button>
+                  <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="17" aria-label="Slide 18"></button>
+                  <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="18" aria-label="Slide 19"></button>
+                  
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active" >
+                    <img src="wordclouds/wc2001.png" alt="2001 Wordcloud" width="700">
+                    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#f8f9fa"/></svg>
+                    <div class="container">
+                      <div class="carousel-caption text-start">
+                        <h1 style="text-align: center; color:black;">Top Words in Song Titles (2001)</h1>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item">
+                    <img src="wordclouds/wc2002.png" alt="2002 Wordcloud" width="700">
+                    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#f8f9fa"/></svg>
+                    <div class="container">
+                        <div class="carousel-caption text-start">
+                          <h1 style="text-align: center; color: black;">Top Words in Song Titles (2002)</h1>
+                        </div>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item">
+                    <img src="wordclouds/wc2003.png" alt="2003 Wordcloud" width="700">
+                    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#f8f9fa"/></svg>
+                    <div class="container">
+                        <div class="carousel-caption text-start">
+                          <h1 style="text-align: center; color: black;">Top Words in Song Titles (2003)</h1>
+                        </div>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item">
+                    <img src="wordclouds/wc2004.png" alt="2004 Wordcloud" width="700">
+                    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#f8f9fa"/></svg>
+                    <div class="container">
+                        <div class="carousel-caption text-start">
+                          <h1 style="text-align: center; color: black;">Top Words in Song Titles (2004)</h1>
+                        </div>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item">
+                    <img src="wordclouds/wc2005.png" alt="2005 Wordcloud" width="700">
+                    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#f8f9fa"/></svg>
+                    <div class="container">
+                        <div class="carousel-caption text-start">
+                          <h1 style="text-align: center; color: black;">Top Words in Song Titles (2005)</h1>
+                        </div>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item">
+                    <img src="wordclouds/wc2006.png" alt="2006 Wordcloud" width="700">
+                    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#f8f9fa"/></svg>
+                    <div class="container">
+                        <div class="carousel-caption text-start">
+                          <h1 style="text-align: center; color: black;">Top Words in Song Titles (2006)</h1>
+                        </div>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item">
+                    <img src="wordclouds/wc2007.png" alt="2007 Wordcloud" width="700">
+                    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#f8f9fa"/></svg>
+                    <div class="container">
+                        <div class="carousel-caption text-start">
+                          <h1 style="text-align: center; color: black;">Top Words in Song Titles (2007)</h1>
+                        </div>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item">
+                    <img src="wordclouds/wc2008.png" alt="2008 Wordcloud" width="700">
+                    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#f8f9fa"/></svg>
+                    <div class="container">
+                        <div class="carousel-caption text-start">
+                          <h1 style="text-align: center; color: black;">Top Words in Song Titles (2008)</h1>
+                        </div>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item">
+                    <img src="wordclouds/wc2009.png" alt="2009 Wordcloud" width="700">
+                    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#f8f9fa"/></svg>
+                    <div class="container">
+                        <div class="carousel-caption text-start">
+                          <h1 style="text-align: center; color: black;">Top Words in Song Titles (2009)</h1>
+                        </div>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item">
+                    <img src="wordclouds/wc2010.png" alt="2010 Wordcloud" width="700">
+                    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#f8f9fa"/></svg>
+                    <div class="container">
+                        <div class="carousel-caption text-start">
+                          <h1 style="text-align: center; color: black;">Top Words in Song Titles (2010)</h1>
+                        </div>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item">
+                    <img src="wordclouds/wc2011.png" alt="2011 Wordcloud" width="700">
+                    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#f8f9fa"/></svg>
+                    <div class="container">
+                        <div class="carousel-caption text-start">
+                          <h1 style="text-align: center; color: black;">Top Words in Song Titles (2011)</h1>
+                        </div>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item">
+                    <img src="wordclouds/wc2012.png" alt="2012 Wordcloud" width="700">
+                    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#f8f9fa"/></svg>
+                    <div class="container">
+                        <div class="carousel-caption text-start">
+                          <h1 style="text-align: center; color: black;">Top Words in Song Titles (2012)</h1>
+                        </div>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item">
+                    <img src="wordclouds/wc2013.png" alt="2013 Wordcloud" width="700">
+                    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#f8f9fa"/></svg>
+                    <div class="container">
+                        <div class="carousel-caption text-start">
+                          <h1 style="text-align: center; color: black;">Top Words in Song Titles (2013)</h1>
+                        </div>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item">
+                    <img src="wordclouds/wc2014.png" alt="2014 Wordcloud" width="700">
+                    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#f8f9fa"/></svg>
+                    <div class="container">
+                        <div class="carousel-caption text-start">
+                          <h1 style="text-align: center; color: black;">Top Words in Song Titles (2014)</h1>
+                        </div>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item">
+                    <img src="wordclouds/wc2015.png" alt="2015 Wordcloud" width="700">
+                    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#f8f9fa"/></svg>
+                    <div class="container">
+                        <div class="carousel-caption text-start">
+                          <h1 style="text-align: center; color: black;">Top Words in Song Titles (2015)</h1>
+                        </div>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item">
+                    <img src="wordclouds/wc2016.png" alt="2016 Wordcloud" width="700">
+                    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#f8f9fa"/></svg>
+                    <div class="container">
+                        <div class="carousel-caption text-start">
+                          <h1 style="text-align: center; color: black;">Top Words in Song Titles (2016)</h1>
+                        </div>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item">
+                    <img src="wordclouds/wc2017.png" alt="2017 Wordcloud" width="700">
+                    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#f8f9fa"/></svg>
+                    <div class="container">
+                        <div class="carousel-caption text-start">
+                          <h1 style="text-align: center; color: black;">Top Words in Song Titles (2017)</h1>
+                        </div>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item">
+                    <img src="wordclouds/wc2018.png" alt="2018 Wordcloud" width="700">
+                    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#f8f9fa"/></svg>
+                    <div class="container">
+                        <div class="carousel-caption text-start">
+                          <h1 style="text-align: center; color: black;">Top Words in Song Titles (2018)</h1>
+                        </div>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item">
+                    <img src="wordclouds/wc2019.png" alt="2019 Wordcloud" width="700">
+                    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#f8f9fa"/></svg>
+                    <div class="container">
+                        <div class="carousel-caption text-start">
+                          <h1 style="text-align: center; color: black;">Top Words in Song Titles (2019)</h1>
+                        </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev" style="background-color: #4CAF50;">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next" style="background-color: #4CAF50;">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            <script src="dist/js/bootstrap.bundle.min.js"></script>
+            
+            <br><br><br>
+            <div class="container px-4 px-lg-5">
+                <p>From the word cloud carousel, we see some common patterns such as love and like occur in many years. In addition, words like girls or miss seem to appear in many of the early years. Towards the late 2010s, we see individual artists names like Khalid or Cardi showing up, and the reason might be that they have a lot of successful collaborations with other artists in the top 100 tracks.</p>
+            </div>
+            <br><br><br>
+        </section>
+
+        <!-- DV3: Gender stacked bar chart (Fernie + Yu-Jan)-->
+        <section class="about-section text-center" id="dv3-intro">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-10">
+                        <div>
+                            <br><br><br>
+                            <h2 class="text-white mb-8">Do the most popular songs skew toward any gender?</h2>
+                            <br><br>
+                            <p class="text-white">Will we see a balanced gender distribution in the music industry? <br> Has the gender distribution changed throughout the years? <br> What might it look like in the near future?</p>
+                            <br><br><br><br><br><br><br><br>
+                        </div>
+                        <a class="btn btn-primary" href="#dv3-viz">What's the gender breakdown?</a>
+                        <br><br><br>
+                    </div>
+                </div> 
+            </div>
+        </section>
+
+        <section class="projects-section bg-light text-center" id="dv3-viz">
+            <!-- Fernie's -->            
+            <div id="stacked-barchart"><h2 id="graph_title3">Gender Breakdown of Top Song Artists (2001-2019)</h2><br></div>
+
+            <div id="my_dataviz3"></div>
+            <script src="main3.js" type="module"></script>
+
+            <br><br><br>
+            <div class="container px-4 px-lg-5">
+                <p>From the bar chart, it is easy to visualize that the music industry, just like many other fields, are male dominant. Throughout the 19 years, we see that male artists constitute around 60% of the population in the top 100 tracks. Therefore, there is a higher chance of having a male artist showing up on the top 100 most popular songs list.</p>
+            </div>
+            <br><br><br>
+        </section>
+
+
+        <!-- DV4: How do your tastes line up? (Yu-Jan)-->
+        <section class="about-section text-center" id="dv4-intro">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-10">
+                        <div>
+                            <br><br><br>
+                            <h2 class="text-white mb-8">How do your tastes line up?</h2>
+                            <br><br>
+                            <p class="text-white">Have you spotted any of your favorite artists in these visualizations? <br> Have your listening habits followed any of these aggregate trends? </p>
+                            <br><br><br><br><br><br><br><br>
+                        </div>
+                        <a class="btn btn-primary" href="#dv4-viz">Let's find out!</a>
+                        <br><br><br>
+                    </div>
+                </div> 
+            </div>
+        </section>
+
+        <section class="projects-section bg-light text-center" id="dv4-viz">
+            <!-- Yu-Jan's -->            
+            <div id="artist_linechart"><h2 id="graph_title4">Number of Songs in the Top 100 by Artist</h2><br></div>
+            <div id="test" style="width:100%; height:100%;"></div>
+            <!-- Initialize a select button -->
+            <p>Select your favorite artist: </p>
+            <select id="selectButton"></select>
+            <!-- Create a div where the graph will take place -->
+            <div id="my_dataviz"></div>
+        
+            <script src="./main.js" type="module"></script>
+            <br><br><br>
+            <div class="container px-4 px-lg-5">
+                <p>By selecting a singer in the dropdown menu In this chart, you can observe different singers’ popularity and productivity for the past 19 years. For example, since 2004, Maroon 5 has been on the Billboard chart every year, indicating their popularity all around the world!</p>
+            </div>
+            <br><br><br>
+        </section>
+
+        <!-- Footer-->
+        <footer class="footer bg-black small text-center text-white-50">
+            <div class="container px-4 px-lg-5">
+                <p>Source: <a href="https://www.kaggle.com/delaneyisabella/spotify-top-100-tracks-20012019?select=Top2019.csv ">Spotify Top 100 Tracks (2001-2019) - Isabella Delaney</a></p>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>
