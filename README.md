@@ -1,4 +1,4 @@
-# 05499  Data Visualization Final Project
+# 05499 Final Project
 
 ## Proejct Title
 **Popular Songs on Spotify from Year 2001 to Year 2019**
@@ -26,13 +26,13 @@ As music lovers, we cannot live without good and fresh music. One of the main mo
 ![line chart taste line up](line_chart.png)
 
 ## Link to paper
-[link to the paper](https://www.example.com/my%20great%20page)
+[link to the paper](https://github.com/CMU-Vis-2021/Final-Project-AW-EZ-FQ-YC/blob/main/writeup.md)
 
 ## Video
 [link to the video](https://www.example.com/my%20great%20page)
 
 ## Link to Webpage
-[link to the webpage](https://www.example.com/my%20great%20page)
+[link to the webpage](https://cmu-vis-2021.github.io/Final-Project-AW-EZ-FQ-YC/)
 
 ## Work Breakdown
 - Emily:
