@@ -1,4 +1,4 @@
-import * as d3v4 from "d3-v4"
+import * as d3v4 from "d3-v3"
 
 // Setup svg using Bostock's margin convention
         

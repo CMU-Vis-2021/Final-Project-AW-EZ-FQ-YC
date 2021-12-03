@@ -1,4 +1,4 @@
-import * as d3_default from "d3";
+import * as d3_default from "./node_modules/d3";
 // import * as d3_default from "./node_modules/d3-v6/index.js"
 
 // set the dimensions and margins of the graph

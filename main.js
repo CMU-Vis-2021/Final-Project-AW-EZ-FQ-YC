@@ -1,4 +1,5 @@
 import * as d3v6 from "d3-v6"
+
 // set the dimensions and margins of the graph
   const margin = {top: 10, right: 100, bottom: 30, left: 30},
   width = 1000 - margin.left - margin.right,
