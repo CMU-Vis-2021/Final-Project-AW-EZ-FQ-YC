@@ -2,10 +2,6 @@
   "homepage": "https://cmu-vis-2021.github.io/Final-Project-AW-EZ-FQ-YC/",
   "name": "d3-crashcourse",
   "version": "0.0.0",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/CMU-Vis-2021/Final-Project-AW-EZ-FQ-YC.git"
-  },
   "keywords": [
     "spotify",
     "songs",
@@ -20,8 +16,6 @@
     "serve": "vite preview"
   },
   "files": [
-    "node-modules/**/*.js",
-    "node-modules/**/**/*.js",
     "*.csv"
   ],
   "devDependencies": {
