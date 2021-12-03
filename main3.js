@@ -1,4 +1,4 @@
-import * as d3v6 from "d3-v6/dist/d3.js"
+import * as d3v6 from "./node_modules/d3-v6/index.js"
 
 // set the dimensions and margins of the graph
 const margin = {top: 10, right: 30, bottom: 20, left: 50},
