@@ -21,7 +21,8 @@
   },
   "files": [
     "node-modules/**/*.js",
-    "node-modules/**/**/*.js"
+    "node-modules/**/**/*.js",
+    "*.csv"
   ],
   "devDependencies": {
     "gh-pages": "^3.2.3",
