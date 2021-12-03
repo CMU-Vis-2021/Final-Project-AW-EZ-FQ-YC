@@ -1,4 +1,4 @@
-import * as d3_default from "./node-modules/d3/dist/d3.js"
+import * as d3_default from "d3"
 
 let chart = BarChart(number, {
   x: d => d.cnt,

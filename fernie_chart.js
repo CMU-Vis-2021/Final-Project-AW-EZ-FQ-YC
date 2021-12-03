@@ -1,4 +1,4 @@
-import * as d3v4 from "./node-modules/d3-v4/build/d3.js"
+import * as d3v4 from "d3-v4"
 
 // Setup svg using Bostock's margin convention
         
