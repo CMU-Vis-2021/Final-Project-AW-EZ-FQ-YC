@@ -1,4 +1,4 @@
-import * as d3v4 from "./node_modules/d3-v4"
+import * as d3v4 from "d3-v4"
 
     // set the dimensions and margins of the graph
     var margin = {top: 10, right: 120, bottom: 30, left: 50},
