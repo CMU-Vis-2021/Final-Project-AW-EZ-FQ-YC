@@ -1,21 +1,25 @@
 {
+  "homepage": "https://cmu-vis-2021.github.io/Final-Project-AW-EZ-FQ-YC/",
   "name": "d3-crashcourse",
   "version": "0.0.0",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview"
   },
   "devDependencies": {
+    "gh-pages": "^3.2.3",
     "vite": "^2.5.2"
   },
   "dependencies": {
     "d3": "^7.0.1",
-    "vega": "^5.21.0",
-    "vega-embed": "^6.19.1",
-    "vega-lite": "^5.1.1",
     "d3-v3": "npm:d3@^3.5.17",
     "d3-v4": "npm:d3@^4.13.0",
-    "d3-v6": "npm:d3@^6.7.0"
+    "d3-v6": "npm:d3@^6.7.0",
+    "vega": "^5.21.0",
+    "vega-embed": "^6.19.1",
+    "vega-lite": "^5.1.1"
   }
 }
