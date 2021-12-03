@@ -3889,8 +3889,6 @@
     return linearish(scale);
   }
 
-  // import * as d3_default from "./node_modules/d3-v6/index.js"
-
   // set the dimensions and margins of the graph
   const margin = {top: 20, right: 30, bottom: 40, left: 200},
       width = 1000 - margin.left - margin.right,
