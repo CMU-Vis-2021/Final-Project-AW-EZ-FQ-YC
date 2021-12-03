@@ -4,11 +4,15 @@
   "version": "0.0.0",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview"
   },
+  "files": [
+    "node-modules/**/*.js",
+    "node-modules/**/**/*.js"
+  ],
   "devDependencies": {
     "gh-pages": "^3.2.3",
     "vite": "^2.5.2"

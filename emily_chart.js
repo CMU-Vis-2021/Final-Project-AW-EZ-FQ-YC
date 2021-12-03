@@ -1,4 +1,4 @@
-import * as d3 from "d3-v4"
+import * as d3v4 from "d3-v4"
 
     // set the dimensions and margins of the graph
     var margin = {top: 10, right: 120, bottom: 30, left: 50},
@@ -6,7 +6,7 @@ import * as d3 from "d3-v4"
         height = 600 - margin.top - margin.bottom;
 
     // append the svg object to the body of the page
-    var svg = d3.select("#multiline_chart")
+    var svg = d3v4.select("#multiline_chart")
       .append("svg")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
@@ -15,7 +15,7 @@ import * as d3 from "d3-v4"
               "translate(" + margin.left + "," + margin.top + ")");
 
     //Read the data
-    d3.csv("averages_by_year.csv",
+    d3v4.csv("averages_by_year.csv",
 
       // Format csv variables:
       function(d){
@@ -34,12 +34,12 @@ import * as d3 from "d3-v4"
       function(data) {
 
         // x axis 
-        var x = d3.scaleLinear()
-          .domain(d3.extent(data, function(d) { return d.year; })) // maybe change extent?
+        var x = d3v4.scaleLinear()
+          .domain(d3v4.extent(data, function(d) { return d.year; })) // maybe change extent?
           .range([ 0, width ]);
         svg.append("g")
           .attr("transform", "translate(0," + height + ")")
-          .call(d3.axisBottom(x));
+          .call(d3v4.axisBottom(x));
 
         // text label for the x axis
         svg.append("text")             
@@ -50,11 +50,11 @@ import * as d3 from "d3-v4"
             .text("Year");  
 
         // y axis
-        var y = d3.scaleLinear()
+        var y = d3v4.scaleLinear()
           .domain([0, 1])
           .range([ height, 0 ]);
         svg.append("g")
-          .call(d3.axisLeft(y));
+          .call(d3v4.axisLeft(y));
 
         // text label for the y axis
         svg.append("text")
@@ -72,7 +72,7 @@ import * as d3 from "d3-v4"
           .attr("fill", "none")
           .attr("stroke", "steelblue")
           .attr("stroke-width", 1.5)
-          .attr("d", d3.line()
+          .attr("d", d3v4.line()
             .x(function(d) { return x(d.year) })
             .y(function(d) { return y(d.danceability) })
           )
@@ -82,7 +82,7 @@ import * as d3 from "d3-v4"
           .attr("fill", "none")
           .attr("stroke", "red")
           .attr("stroke-width", 1.5)
-          .attr("d", d3.line()
+          .attr("d", d3v4.line()
             .x(function(d) { return x(d.year) })
             .y(function(d) { return y(d.energy) })
           )
@@ -92,7 +92,7 @@ import * as d3 from "d3-v4"
           .attr("fill", "none")
           .attr("stroke", "green")
           .attr("stroke-width", 1.5)
-          .attr("d", d3.line()
+          .attr("d", d3v4.line()
             .x(function(d) { return x(d.year) })
             .y(function(d) { return y(d.speechiness) })
           )
@@ -102,7 +102,7 @@ import * as d3 from "d3-v4"
           .attr("fill", "none")
           .attr("stroke", "orange")
           .attr("stroke-width", 1.5)
-          .attr("d", d3.line()
+          .attr("d", d3v4.line()
             .x(function(d) { return x(d.year) })
             .y(function(d) { return y(d.acousticness) })
           )
@@ -112,7 +112,7 @@ import * as d3 from "d3-v4"
           .attr("fill", "none")
           .attr("stroke", "purple")
           .attr("stroke-width", 1.5)
-          .attr("d", d3.line()
+          .attr("d", d3v4.line()
             .x(function(d) { return x(d.year) })
             .y(function(d) { return y(d.instrumentalness) })
           )
@@ -122,7 +122,7 @@ import * as d3 from "d3-v4"
           .attr("fill", "none")
           .attr("stroke", "pink")
           .attr("stroke-width", 1.5)
-          .attr("d", d3.line()
+          .attr("d", d3v4.line()
             .x(function(d) { return x(d.year) })
             .y(function(d) { return y(d.liveness) })
           )
@@ -132,7 +132,7 @@ import * as d3 from "d3-v4"
           .attr("fill", "none")
           .attr("stroke", "lime")
           .attr("stroke-width", 1.5)
-          .attr("d", d3.line()
+          .attr("d", d3v4.line()
             .x(function(d) { return x(d.year) })
             .y(function(d) { return y(d.valence) })
           )
