@@ -1,4 +1,4 @@
-import * as d3 from "d3-v6"
+import * as d3v6 from "d3-v6"
 
 // set the dimensions and margins of the graph
   const margin = {top: 10, right: 100, bottom: 30, left: 30},
@@ -6,7 +6,7 @@ import * as d3 from "d3-v6"
   height = 600 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
-const svg = d3.select("#my_dataviz")
+const svg = d3v6.select("#my_dataviz")
 .append("svg")
   .attr("width", width + margin.left + margin.right)
   .attr("height", height + margin.top + margin.bottom)
@@ -15,18 +15,18 @@ const svg = d3.select("#my_dataviz")
 
 // time 
 
-const tParser = d3.timeParse("%Y");
+const tParser = d3v6.timeParse("%Y");
 
-const yearParser = d3.timeFormat("%Y")
+const yearParser = d3v6.timeFormat("%Y")
 
 //Read the data
-d3.csv("topsongs.csv").then( function(data) {
+d3v6.csv("topsongs.csv").then( function(data) {
 
   // List of groups (here I have one group per column)
   let options = [...new Set(data.map(d => d.artists))]; 
 
   // add the options to the button
-  d3.select("#selectButton")
+  d3v6.select("#selectButton")
     .selectAll('myOptions')
      .data(options)
     .enter()
@@ -37,19 +37,19 @@ d3.csv("topsongs.csv").then( function(data) {
   
 
   // Add X axis --> it is a date format
-  const x = d3.scaleLinear()
-    .domain([d3.min(data, function(d) { return d.year; }), d3.max(data, function(d) { return d.year; })])
+  const x = d3v6.scaleLinear()
+    .domain([d3v6.min(data, function(d) { return d.year; }), d3v6.max(data, function(d) { return d.year; })])
     .range([ 0, width ]);
   svg.append("g")
     .attr("transform", `translate(0, ${height})`)
-    .call(d3.axisBottom(x).tickFormat(d3.format("d")));
+    .call(d3v6.axisBottom(x).tickFormat(d3v6.format("d")));
 
   // Add Y axis
-  const y = d3.scaleLinear()
-    .domain( [0, d3.max(data, function(d) { return Number(d.count); })])
+  const y = d3v6.scaleLinear()
+    .domain( [0, d3v6.max(data, function(d) { return Number(d.count); })])
     .range([ height, 0 ]);
   svg.append("g")
-    .call(d3.axisLeft(y));
+    .call(d3v6.axisLeft(y));
 
   // Initialize line with some dots
   svg
@@ -72,7 +72,7 @@ d3.csv("topsongs.csv").then( function(data) {
     .append('g')
     .append("path")
       .datum(data)
-      .attr("d", d3.line()
+      .attr("d", d3v6.line()
         .x(function(d) { return x(+d.time) })
         .y(function(d) { return y(+d.value) })
       )
@@ -115,7 +115,7 @@ svg.append("text")
     // Give these new data to update line
     line
         .datum(dataFilter)
-        .attr("d", d3.line()
+        .attr("d", d3v6.line()
           .x(function(d) { return x(+d.time) })
           .y(function(d) { return y(+d.value) }) 
         )
@@ -125,9 +125,9 @@ svg.append("text")
   }
 
   // When the button is changed, run the updateChart function
-  d3.select("#selectButton").on("change", function(event,d) {
+  d3v6.select("#selectButton").on("change", function(event,d) {
       // recover the option that has been chosen
-      const selectedOption = d3.select(this).property("value")
+      const selectedOption = d3v6.select(this).property("value")
       // run the updateChart function with this selected option
       update(selectedOption)
   })

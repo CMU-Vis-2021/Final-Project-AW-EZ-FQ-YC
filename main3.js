@@ -1,4 +1,4 @@
-import * as d3 from "d3-v6"
+import * as d3v6 from "d3-v6"
 
 // set the dimensions and margins of the graph
 const margin = {top: 10, right: 30, bottom: 20, left: 50},
@@ -6,7 +6,7 @@ const margin = {top: 10, right: 30, bottom: 20, left: 50},
     height = 600 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
-const svg = d3.select("#my_dataviz3")
+const svg = d3v6.select("#my_dataviz3")
   .append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
@@ -14,7 +14,7 @@ const svg = d3.select("#my_dataviz3")
     .attr("transform",`translate(${margin.left},${margin.top})`);
 
 // Parse the Data
-d3.csv("gender.csv").then( function(data) {
+d3v6.csv("gender.csv").then( function(data) {
 
   // List of subgroups = header of the csv files = soil condition here
   const subgroups = data.columns.slice(1)
@@ -23,28 +23,28 @@ d3.csv("gender.csv").then( function(data) {
   const groups = data.map(d => d.group)
 
   // Add X axis
-  const x = d3.scaleBand()
+  const x = d3v6.scaleBand()
       .domain(groups)
       .range([0, width])
       .padding([0.2])
   svg.append("g")
     .attr("transform", `translate(0, ${height})`)
-    .call(d3.axisBottom(x).tickSizeOuter(0));
+    .call(d3v6.axisBottom(x).tickSizeOuter(0));
 
   // Add Y axis
-  const y = d3.scaleLinear()
+  const y = d3v6.scaleLinear()
     .domain([0, 100])
     .range([ height, 0 ]);
   svg.append("g")
-    .call(d3.axisLeft(y));
+    .call(d3v6.axisLeft(y));
 
   // color palette = one color per subgroup
-  const color = d3.scaleOrdinal()
+  const color = d3v6.scaleOrdinal()
     .domain(subgroups)
     .range(['#6495ED','#ff1493','#d9d574'])
 
   //stack the data? --> stack per subgroup
-  const stackedData = d3.stack()
+  const stackedData = d3v6.stack()
     .keys(subgroups)
     (data)
 
@@ -54,7 +54,7 @@ d3.csv("gender.csv").then( function(data) {
   // ----------------
   // Create a tooltip
   // ----------------
-  const tooltip = d3.select("#my_dataviz3")
+  const tooltip = d3v6.select("#my_dataviz3")
     .append("div")
     .style("opacity", 0)
     .attr("class", "tooltip")
@@ -67,7 +67,7 @@ d3.csv("gender.csv").then( function(data) {
 
   // Three function that change the tooltip when user hover / move / leave a cell
   const mouseover = function(event, d) {
-    const subgroupName = d3.select(this.parentNode).datum().key;
+    const subgroupName = d3v6.select(this.parentNode).datum().key;
     const subgroupValue = d.data[subgroupName];
     tooltip
         .html("subgroup: " + subgroupName + "<br>" + "Value: " + subgroupValue)
